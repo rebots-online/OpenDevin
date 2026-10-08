@@ -11,9 +11,6 @@ on:
         options:
           - app server
         default: app server
-  push:
-    tags:
-      - "*"
 
 jobs:
   release:

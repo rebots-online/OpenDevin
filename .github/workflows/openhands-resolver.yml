@@ -1,6 +1,7 @@
 name: Auto-Fix Tagged Issue with OpenHands
 
 on:
+  workflow_dispatch:
   workflow_call:
     inputs:
       max_iterations:
@@ -49,17 +50,6 @@ on:
         required: false
       PAT_USERNAME:
         required: false
-
-  issues:
-    types: [labeled]
-  pull_request:
-    types: [labeled]
-  issue_comment:
-    types: [created]
-  pull_request_review_comment:
-    types: [created]
-  pull_request_review:
-    types: [submitted]
 
 permissions:
   contents: write

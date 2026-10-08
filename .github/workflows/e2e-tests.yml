@@ -1,11 +1,6 @@
 name: End-to-End Tests
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened, labeled]
-    branches:
-      - main
-      - develop
   workflow_dispatch:
 
 jobs:

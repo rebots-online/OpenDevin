@@ -1,9 +1,7 @@
 name: Enterprise Check Migrations
 
 on:
-  pull_request:
-    paths:
-      - 'enterprise/migrations/**'
+  workflow_dispatch:
 
 jobs:
   check-sync:

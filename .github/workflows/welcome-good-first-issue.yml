@@ -1,8 +1,7 @@
 name: Welcome Good First Issue
 
 on:
-  issues:
-    types: [labeled]
+  workflow_dispatch:
 
 permissions:
   issues: write

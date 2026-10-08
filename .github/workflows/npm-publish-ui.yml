@@ -3,14 +3,8 @@ name: Publish OpenHands UI Package
 # * Always run on "main"
 # * Run on PRs that have changes in the "openhands-ui" folder or this workflow
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - "openhands-ui/**"
-      - ".github/workflows/npm-publish-ui.yml"
+  workflow_dispatch:
 
-# If triggered by a PR, it will be in the same group. However, each commit on main will be in its own unique group
 concurrency:
   group: npm-publish-ui
   cancel-in-progress: false

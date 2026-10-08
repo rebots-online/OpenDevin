@@ -3,10 +3,8 @@ name: Enterprise Preview
 
 # Run on PRs labeled
 on:
-  pull_request:
-    types: [labeled]
+  workflow_dispatch:
 
-# Match ghcr-build.yml, but don't interrupt it.
 concurrency:
   group: ${{ github.workflow }}-${{ (github.head_ref && github.ref) || github.run_id }}
   cancel-in-progress: false

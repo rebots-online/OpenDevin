@@ -2,13 +2,7 @@
 name: Run Frontend E2E Tests
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    paths:
-      - "frontend/**"
-      - ".github/workflows/fe-e2e-tests.yml"
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ (github.head_ref && github.ref) || github.run_id }}
